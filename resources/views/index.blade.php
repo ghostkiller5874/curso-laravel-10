@@ -198,7 +198,7 @@
   </symbol>
 </svg>
 
-
+<!-- NAVBAR -->
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Gestão</a>
 
@@ -239,15 +239,19 @@
 
 @yield('scripts')
 <script defer src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+
 <script defer src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
 <script defer src="{{asset('js/chart.umd.js')}}" ></script>
 <script defer src="{{asset('js/dashboard.j')}}s"></script>
 <script defer src="{{asset('js/color-modes.js')}}"></script>
+<script defer src="{{asset('js/projeto.js')}}"></script>
 
 {{-- InputMask --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 {{-- BlocUI loading --}}
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+
+
 </body>
 </html>

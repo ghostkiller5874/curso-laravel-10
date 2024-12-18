@@ -21,6 +21,13 @@ Route::get('/', function () {
 
 // PRODUTOS
 Route::prefix('produtos')->group(function(){
+    // principal
     Route::get('/',[ProdutosController::class, 'index'])->name('produtos.index');
+    
+    // cadastrar
+    Route::get('/cadastrarProduto',[ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto');
+    Route::post('/cadastrarProduto',[ProdutosController::class, 'cadastrarProduto'])->name('cadastrar.produto');
+
+    // deletar
     Route::delete('/delete',[ProdutosController::class, 'deletar'])->name('produtos.deletar');
 });
