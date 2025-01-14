@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 // Model
 use App\Models\Produtos;
 
+// Request
+use App\Http\Requests\FormRequestProduto;
+
 class ProdutosController extends Controller
 {
 
@@ -30,9 +33,13 @@ class ProdutosController extends Controller
         return response()->json(['success'=>true]);
     }
 
-    public function cadastrarProduto(Request $request){
+    public function cadastrarProduto(FormRequestProduto $request){
         if($request->method() == "POST"){
             // cria os dados
+            $data = $request->all();
+            Produtos::create($data);
+
+            return redirect()->route('produtos.index');
         }
 
         return view('pages.produtos.create');

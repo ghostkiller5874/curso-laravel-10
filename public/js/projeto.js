@@ -28,3 +28,6 @@ function deleteRegistroPaginacao(rotaUrl, idRegistro){
         });
     }
 }
+
+// nao esta respondendo, analisar melhor posteriormente
+// $('#mascara_valor').mask("#.##0,00", {reverse: true});
