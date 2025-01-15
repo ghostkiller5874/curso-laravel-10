@@ -9,14 +9,14 @@
   <div class="form-row">
   <div class="mb-3">
     <label class="form-label">Nome: </label>
-    <input type="text" class="form-control @error('nome') is-invalid @enderror"  name="nome">
+    <input type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{@old('nome')}}">
     @if($errors->has('nome'))
         <div class="invalid-feedback">{{$errors->first('nome')}}</div>
     @endif
   </div>
   <div class="mb-3">
     <label  class="form-label">Valor: </label>
-    <input id="mascara_valor" type="number" min="0" step=".01" class="form-control @error('nome') is-invalid @enderror" name="valor" placeholder="Ex: 5.3">
+    <input id="mascara_valor" type="text" class="form-control @error('nome') is-invalid @enderror" name="valor" placeholder="Ex: 5.3" value="{{@old('valor')}}">
     @if($errors->has('valor'))
         <div class="invalid-feedback">{{$errors->first('valor')}}</div>
     @endif

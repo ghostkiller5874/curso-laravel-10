@@ -34,7 +34,7 @@
               <td>{{$produto->nome}}</td>
               <td>{{ 'R$'.' '. number_format($produto->valor,2,',','.') }}</td>
               <td>
-                <a href="#" class="btn btn-light btn-small">Editar</a>
+                <a href="{{route('atualizar.produto',$produto->id)}}" class="btn btn-light btn-small">Editar</a>
                 <meta name="csrf-token" content="{{csrf_token()}}">
                 <a onclick="deleteRegistroPaginacao('{{route('produtos.deletar')}}',{{$produto->id}})" class="btn btn-danger btn-small">Excluir</a>
               </td>

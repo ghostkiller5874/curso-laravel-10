@@ -25,6 +25,7 @@
 <link rel="manifest" href="{{asset('icons/manifest.json')}}">
 <link rel="mask-icon" href="{{asset('icons/safari-pinned-tab.svg')}}" color="#712cf9">
 <link rel="icon" href="{{asset('favicon.ico')}}">
+<link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 <meta name="theme-color" content="#712cf9">
 
 
@@ -244,15 +245,20 @@
 <script defer src="{{asset('js/chart.umd.js')}}" ></script>
 <script defer src="{{asset('js/dashboard.j')}}s"></script>
 <script defer src="{{asset('js/color-modes.js')}}"></script>
-<script defer src="{{asset('js/projeto.js')}}"></script>
+
 
 {{-- InputMask --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 
 
 {{-- BlocUI loading --}}
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
 
+
+<script defer src="{{asset('js/projeto.js')}}"></script>
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+{!! Toastr::message() !!}
 
 </body>
 </html>

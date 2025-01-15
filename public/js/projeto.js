@@ -11,7 +11,7 @@ function deleteRegistroPaginacao(rotaUrl, idRegistro){
             beforeSend: function(){
                 $.blockUI({
                     message: 'Um instante por favor ...',
-                    timeout: 2000,
+                    timeout: 2500,
                 });
             },
         }).done(function(data){
@@ -30,4 +30,5 @@ function deleteRegistroPaginacao(rotaUrl, idRegistro){
 }
 
 // nao esta respondendo, analisar melhor posteriormente
-// $('#mascara_valor').mask("#.##0,00", {reverse: true});
+// resolvido => desceu a ordem do arquivo
+$('#mascara_valor').mask('#.##0,00', {reverse: true});
