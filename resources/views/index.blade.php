@@ -242,6 +242,7 @@
 <script defer src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
 
 <script defer src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
+<script defer src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
 <script defer src="{{asset('js/chart.umd.js')}}" ></script>
 <script defer src="{{asset('js/dashboard.j')}}s"></script>
 <script defer src="{{asset('js/color-modes.js')}}"></script>
