@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\VendasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +53,14 @@ Route::prefix('clientes')->group(function(){
 
     // deletar
     Route::delete('/delete',[ClientesController::class, 'deletar'])->name('cliente.deletar');
+});
+
+// VENDAS
+Route::prefix('vendas')->group(function(){
+    // principal
+    Route::get('/',[VendasController::class, 'index'])->name('venda.index');
+    
+    // cadastrar
+    Route::get('/cadastrarVenda',[VendasController::class, 'cadastrarVenda'])->name('cadastrar.venda');
+    Route::post('/cadastrarVenda',[VendasController::class, 'cadastrarVenda'])->name('cadastrar.venda');
 });

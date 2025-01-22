@@ -8,7 +8,6 @@ use Brian2694\Toastr\Facades\Toastr;
 // Model
 use App\Models\Cliente;
 
-
 // Request
 use App\Http\Requests\FormRequestClientes;
 
