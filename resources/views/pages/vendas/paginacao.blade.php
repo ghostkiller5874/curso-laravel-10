@@ -36,7 +36,7 @@
               <td>{{$vendas->numero_venda}}</td>{{--acessavel graças ao belongsTo no model--}}
               <td>{{$vendas->cliente->nome}}</td>{{--acessavel graças ao belongsTo no model--}}
               <td>
-                <a href="" class="btn btn-light btn-small">Enviar E-mail</a>
+                <a href="{{route('enviarComprovantePorEmail.venda', $vendas->id)}}" class="btn btn-light btn-small">Enviar E-mail</a>
               </td>
             </tr>
 
