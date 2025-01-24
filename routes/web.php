@@ -7,6 +7,7 @@ use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\VendasController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,4 +67,21 @@ Route::prefix('vendas')->group(function(){
     Route::get('/cadastrarVenda',[VendasController::class, 'cadastrarVenda'])->name('cadastrar.venda');
     Route::post('/cadastrarVenda',[VendasController::class, 'cadastrarVenda'])->name('cadastrar.venda');
     Route::get('/enviarComprovantePorEmail/{id}',[VendasController::class, 'enviarComprovantePorEmail'])->name('enviarComprovantePorEmail.venda');
+});
+
+// USUARIOS
+Route::prefix('usuario')->group(function(){
+    // principal
+    Route::get('/',[UsuarioController::class, 'index'])->name('usuario.index');
+    
+    // cadastrar
+    Route::get('/cadastrarUsuario',[UsuarioController::class, 'cadastrarUsuario'])->name('cadastrar.usuario');
+    Route::post('/cadastrarUsuario',[UsuarioController::class, 'cadastrarUsuario'])->name('cadastrar.usuario');
+    
+    // Editar
+    Route::get('/atualizarUsuario/{id}',[UsuarioController::class, 'atualizarUsuario'])->name('atualizar.usuario');
+    Route::put('/atualizarUsuario/{id}',[UsuarioController::class, 'atualizarUsuario'])->name('atualizar.usuario');
+
+    // deletar
+    Route::delete('/delete',[UsuarioController::class, 'deletar'])->name('usuario.deletar');
 });
